@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>spotify search</title>
+</head>
+
+<body>
+    <h1>Lookup your music right HERE</h1>
+
+    <input type="text" class="input" placeholder="type artist or album name">
+
+    <select class="search">
+        <option value="artist" class="artist">Artist</option>
+        <option value="album" class="album">Album</option>
+      </select>
+    <div class="song"></div>
+    <button type="button" name="button" class="button">GO</button>
+    <div class="show"></div>
+
+    <button class="next">//  Give me some more  //</button>
+    <script id="songs" type="text/x-handlebars-template">
+
+        {{#dataResults}}
+        <div class="results">
+            <img src="{{photo}}">
+            <a href="{{url}}">{{name}}</a>
+        </div>
+        {{/dataResults}}
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
